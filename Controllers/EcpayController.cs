@@ -13,7 +13,9 @@ public class EcpayController : ControllerBase
     {
         var ecPay = new EcPay();
         PostData postData = new PostData();
-        postData.MerchantTradeNo = "D13228106959";
+        var random = new Random();
+        var randomVlaue = random.Next(0, 99);
+        postData.MerchantTradeNo = $"D132281069{randomVlaue}";
         postData.TotalAmount = 1000;
         postData.TradeDesc = "測試機";
         postData.ItemName = "商品一批";
