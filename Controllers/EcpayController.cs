@@ -17,17 +17,12 @@ public class EcpayController : ControllerBase
         var randomVlaue = random.Next(0, 99);
         postData.MerchantTradeNo = $"D132281069{randomVlaue}";
         postData.TotalAmount = 1000;
-        postData.TradeDesc = "測試機";
-        postData.ItemName = "商品一批";
-        postData.ReturnURL = "http://localhost:5000/api/ecpay/ecpay_callback";
-        postData.ClientBackURL = "http://localhost:5000/api/ecpay/ecpay_callback";
-        var ecHtml = ecPay.aio_check_out_credit_onetime(postData);
+        postData.TradeDesc = "TradeDesc";
+        postData.ItemName = "ProductBatch";
+        postData.ReturnURL = "https://localhost:5000/api/ecpay/ecpay_callback";
+        postData.ClientBackURL = "https://localhost:5000/api/ecpay/ecpay_callback";
+        var html = ecPay.aio_check_out_credit_onetime(postData);
         // Console.WriteLine("postData.MerchantID: {0}", postData.MerchantID);
-        var html = $@"
-            var ecpay_div = document.createElement(""div"");
-            ecpay_div.innerHTML = {ecHtml}
-            document.body.appendChild(ecpay_div);
-        ";
         return new ContentResult
         {
             Content = html,

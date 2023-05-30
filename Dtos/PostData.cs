@@ -8,7 +8,7 @@ namespace API.Dtos
         public string? ItemName { get; set; } // 商品名稱
         public string? ReturnURL { get; set; } // 付款完成通知網址
         public string? ClientBackURL { get; set; } // 付款結果網址
-        public string MerchantID { get; set; } = "3002599"; // 特店編號 MerchantID
+        public string MerchantID { get; set; } = "2000214"; // 特店編號 MerchantID
         public string? MerchantTradeDate { get; set; } //
         public string PaymentType { get; set; } = "aio";
         public string ChoosePayment { get; set; } = "Credit"; // 預設付款方式 信用卡

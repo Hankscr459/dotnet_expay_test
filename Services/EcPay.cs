@@ -11,10 +11,10 @@ namespace API.Services.EcPay
     {
         public EcPay()
         {
-            ECPayHashKey = "pwFHCqoQZGmho4w6";
-            ECPayHashIV = "EkRm7iFT261dpevs";
+            ECPayHashKey = "5294y06JbISpM5x9";
+            ECPayHashIV = "v77hoKGq4kWxNNIS";
             ECPayUrl = "https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5";
-            MerchantID = "3002607";
+            MerchantID = "2000214";
         }
         public string ECPayHashKey { get; set; }
         public string ECPayHashIV { get; set; }
